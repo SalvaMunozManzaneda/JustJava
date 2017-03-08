@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 import java.text.NumberFormat;
+import java.util.Locale;
 
 import com.example.administrador.justjava.R;
 
@@ -54,10 +55,11 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * This method displays the given price on the screen.
+     * locale.GERMANY is for '€' simbol 
      */
     private void displayPrice(int number) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
+        priceTextView.setText(NumberFormat.getCurrencyInstance(Locale.GERMANY).format(number));
     }
 
 
