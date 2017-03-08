@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * This method displays the given price on the screen.
-     * locale.GERMANY is for '€' simbol 
+     * locale.GERMANY is for '€' simbol
      */
     private void displayPrice(int number) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
