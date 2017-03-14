@@ -19,6 +19,9 @@ import com.example.administrador.justjava.R;
  */
 public class MainActivity extends AppCompatActivity {
 
+    int quantity = 0;
+    int price = 5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,21 +32,20 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int quantity = 2;
         display (quantity);
         displayPrice (quantity * 5);
     }
 
     public void increment(View view){
-        int quantity = 2;
         quantity += 1;
         display(quantity);
+        displayPrice(quantity * price);
     }
 
     public void decrement(View view){
-        int quantity = 1;
         quantity -= 1;
         display(quantity);
+        displayPrice(quantity * price);
     }
 
     /**
