@@ -20,7 +20,7 @@ import com.example.administrador.justjava.R;
 public class MainActivity extends AppCompatActivity {
 
     int quantity = 0;
-    int price = 5;
+    int price = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,19 +33,19 @@ public class MainActivity extends AppCompatActivity {
      */
     public void submitOrder(View view) {
         display (quantity);
-        displayPrice (quantity * 5);
+        displayPrice (quantity * price);
     }
 
     public void increment(View view){
         quantity += 1;
         display(quantity);
-        displayPrice(quantity * price);
+        //displayPrice(quantity * price); para actualizar automaticamente en cada cambio
     }
 
     public void decrement(View view){
         quantity -= 1;
         display(quantity);
-        displayPrice(quantity * price);
+        //displayPrice(quantity * price); para actualizar automaticamente en cada cambio
     }
 
     /**
